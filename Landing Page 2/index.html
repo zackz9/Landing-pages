@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML CSS JS |  Landing Page 2</title>
+    <link href="https://fonts.googleapis.com/css2?family=Baumans&family=Cabin&family=Montserrat+Alternates&family=MuseoModerno:wght@200;400;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/70104cd0e2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    
+    <section>
+
+        <header>
+            <a href="#" class="logo">TitleOf</a>
+            <div class="toggle" onclick="toggleNav();">
+                <span>
+                    <i class="fas fa-bars" id="bars"></i>
+                    <i class="fas fa-times hidd"></i>
+                </span>
+
+                
+            </div>
+
+        </header>
+
+        <div class="content">
+            <h2>"Roads are a record <br>of those who have<br> gone before..."</h2>
+        </div>
+
+        <div class="play" onclick="toggleVideo();">
+            <span>Play the video <i class="far fa-play-circle"></i></span>
+        </div>
+
+        <ul class="soc">
+            <li>
+                <a href="#">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="#">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </li>
+        </ul>
+
+        <div class="navig">
+            <ul>
+                <li>
+                    <a href="#">Home</a>
+                </li>
+                <li>    
+                    <a href="#">About</a>
+                </li>
+                <li>
+                    <a href="#">Gallery</a>
+                </li>
+                <li>
+                    <a href="#">Features</a>
+                </li>
+                <li>
+                    <a href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <div class="trailer">
+        <video src="your movie here" controls="true"></video>
+        <span class="close" onclick="toggleVideo();">
+            <i class="fas fa-times"></i>
+        </span>
+    </div>
+
+    <script type="text/javascript">
+
+        function toggleNav() {
+
+            const menuToggle = document.querySelector('.toggle');
+            const navig = document.querySelector('.navig');
+            const bars = document.getElementById('bars');
+            
+            bars.classList.toggle('active');
+
+            menuToggle.classList.toggle('active');
+            navig.classList.toggle('active');
+
+        }
+
+        function toggleVideo() {
+            
+            const trailer = document.querySelector('.trailer');
+            const video = document.querySelector('video');
+            trailer.classList.toggle('active');
+            trailer.currentTime = 0;
+            video.pause();
+
+
+        }
+    </script>
+</body>
+</html>
